@@ -2699,3 +2699,24 @@ main,
 footer {
     background-color: transparent;
 }
+.about-section {
+    background:transparent;
+}
+.contact-section{
+    background:transparent;
+}
+.team-section{
+    background:transparent;
+}
+.join-section{
+    background:transparent;
+}
+.portfolio-section{
+    background:transparent;
+}
+.testimonials-section{
+    background:transparent;
+}
+.review-form-section{
+    background:transparent;
+}
