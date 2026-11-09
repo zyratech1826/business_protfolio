@@ -1,0 +1,553 @@
+
+/* ========================================
+   ZYRA TECH - FREELANCER REGISTRATION
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #080711;
+    --bg-light: #100e1d;
+    --card: #151226;
+    --purple: #9b5cff;
+    --purple-light: #bd91ff;
+    --pink: #e47aff;
+    --white: #ffffff;
+    --text: #f3efff;
+    --muted: #aaa4bd;
+    --border: rgba(255, 255, 255, 0.09);
+    --gradient: linear-gradient(120deg, #8952ff, #d46cff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.register-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 17px 7%;
+    background: rgba(8, 7, 17, 0.9);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(18px);
+}
+
+.register-nav {
+    max-width: 1180px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--purple-light);
+}
+
+.back-link {
+    color: var(--muted);
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: var(--purple-light);
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.register-hero {
+    min-height: 440px;
+    padding: 100px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 50% 50%, rgba(129, 65, 219, 0.2), transparent 65%),
+        var(--bg);
+}
+
+.register-hero::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: -150px;
+    right: -100px;
+    background: rgba(155, 92, 255, 0.15);
+    filter: blur(100px);
+    border-radius: 50%;
+}
+
+.register-hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-tag {
+    display: inline-block;
+    color: var(--purple-light);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.register-hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.12;
+    margin: 20px 0;
+}
+
+.gradient-text {
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.register-hero p {
+    max-width: 680px;
+    margin: 0 auto 30px;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.register-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 27px;
+    border: none;
+    border-radius: 8px;
+    background: var(--gradient);
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 8px 30px rgba(155, 92, 255, 0.2);
+}
+
+.register-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(155, 92, 255, 0.4);
+}
+
+.register-btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ========================================
+   COMMON SECTION
+======================================== */
+
+.benefits-section,
+.registration-section {
+    padding: 90px 7%;
+}
+
+.benefits-section {
+    background: var(--bg-light);
+}
+
+.register-container {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.register-section-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.register-section-heading h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin: 13px 0;
+}
+
+.register-section-heading p {
+    color: var(--muted);
+}
+
+/* ========================================
+   BENEFITS
+======================================== */
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.benefit-card {
+    padding: 28px 22px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background: var(--card);
+    transition: 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(189, 145, 255, 0.5);
+    background: #1d1933;
+}
+
+.benefit-icon {
+    width: 53px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    background: rgba(155, 92, 255, 0.15);
+    color: var(--purple-light);
+    font-size: 1.7rem;
+}
+
+.benefit-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   REGISTRATION FORM
+======================================== */
+
+.registration-section {
+    background:
+        radial-gradient(ellipse at 10% 20%, rgba(118, 63, 194, 0.08), transparent 40%),
+        var(--bg);
+}
+
+.freelancer-form {
+    padding: 40px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--card);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.form-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.form-heading > span {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    background: rgba(155, 92, 255, 0.16);
+    color: var(--purple-light);
+    font-weight: 800;
+}
+
+.form-heading h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3rem;
+}
+
+.form-heading p {
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 23px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: var(--text);
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    background: #0d0b19;
+    color: var(--white);
+    font-size: 0.93rem;
+    transition: 0.3s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #77718a;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px rgba(155, 92, 255, 0.12);
+}
+
+.form-group select option {
+    background: #151226;
+    color: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.form-group small {
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.form-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 38px 0;
+}
+
+/* ========================================
+   PROFILE PHOTO PREVIEW
+======================================== */
+
+.photo-preview {
+    margin-top: 10px;
+}
+
+.photo-preview img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid var(--purple);
+    border-radius: 50%;
+}
+
+/* ========================================
+   AGREEMENT
+======================================== */
+
+.form-agreement {
+    margin: 30px 0;
+}
+
+.form-agreement label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.form-agreement input {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 4px;
+    accent-color: var(--purple);
+}
+
+.submit-btn {
+    width: 100%;
+    font-size: 1rem;
+}
+
+.registration-message {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 0.92rem;
+    color: var(--purple-light);
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.register-footer {
+    padding: 40px 7% 25px;
+    text-align: center;
+    background: #05040b;
+    border-top: 1px solid var(--border);
+}
+
+.register-footer p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.register-footer .copyright {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefits-section,
+    .registration-section {
+        padding: 75px 6%;
+    }
+}
+
+@media (max-width: 600px) {
+    .register-header {
+        padding: 15px 6%;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .register-hero {
+        min-height: 400px;
+        padding: 75px 6%;
+    }
+
+    .register-hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .register-hero p {
+        font-size: 0.95rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .freelancer-form {
+        padding: 23px 18px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+
+    .form-heading {
+        align-items: flex-start;
+    }
+
+    .form-heading h3 {
+        font-size: 1.1rem;
+    }
+
+    .form-divider {
+        margin: 28px 0;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+:focus-visible {
+    outline: 2px solid var(--purple-light);
+    outline-offset: 4px;
+}
+
+::selection {
+    background: var(--purple);
+    color: white;
+}
+
+[hidden] {
+    display: none !important;
+}

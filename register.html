@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the Zyra Tech freelancer community and collaborate on creative digital projects.">
+    <title>Join Our Community | Zyra Tech</title>
+
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <canvas id="particle-background"></canvas>
+    <!-- NAVIGATION -->
+    <header class="register-header">
+        <nav class="register-nav">
+            <a href="index.html" class="logo">
+                ZYRA<span>TECH</span>
+            </a>
+
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="register-hero">
+        <div class="register-hero-content">
+            <span class="section-tag">ZYRA TECH COMMUNITY</span>
+
+            <h1>
+                Turn Your Skills Into
+                <span class="gradient-text">Opportunities.</span>
+            </h1>
+
+            <p>
+                Join a growing community of creative and passionate freelancers.
+                Collaborate, share your expertise, and work together on exciting
+                digital projects.
+            </p>
+
+            <a href="#registration-form" class="register-btn">
+                Become a Freelancer →
+            </a>
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="benefits-section">
+        <div class="register-container">
+
+            <div class="register-section-heading">
+                <span class="section-tag">WHY JOIN US?</span>
+                <h2>Grow Together With Zyra Tech</h2>
+                <p>
+                    Connect with people, improve your skills, and explore
+                    opportunities through collaboration.
+                </p>
+            </div>
+
+            <div class="benefits-grid">
+
+                <article class="benefit-card">
+                    <div class="benefit-icon">✦</div>
+                    <h3>Project Opportunities</h3>
+                    <p>
+                        Get opportunities to participate in creative and
+                        technology-based projects.
+                    </p>
+                </article>
+
+                <article class="benefit-card">
+                    <div class="benefit-icon">◇</div>
+                    <h3>Skill Development</h3>
+                    <p>
+                        Improve your technical and creative skills through
+                        practical experience.
+                    </p>
+                </article>
+
+                <article class="benefit-card">
+                    <div class="benefit-icon">◎</div>
+                    <h3>Collaboration</h3>
+                    <p>
+                        Connect with other freelancers and work together
+                        as a team.
+                    </p>
+                </article>
+
+                <article class="benefit-card">
+                    <div class="benefit-icon">↗</div>
+                    <h3>Build Your Portfolio</h3>
+                    <p>
+                        Showcase your projects, experience, and abilities
+                        through your work.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTRATION FORM -->
+    <section class="registration-section" id="registration-form">
+        <div class="register-container">
+
+            <div class="register-section-heading">
+                <span class="section-tag">REGISTRATION</span>
+                <h2>Become a Part of Our Community</h2>
+                <p>
+                    Share your details and tell us more about your skills.
+                </p>
+            </div>
+
+            <form id="freelancerForm" class="freelancer-form">
+
+                <!-- PERSONAL DETAILS -->
+                <div class="form-heading">
+                    <span>01</span>
+                    <div>
+                        <h3>Personal Information</h3>
+                        <p>Tell us a little about yourself.</p>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@email.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location *</label>
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            placeholder="City, Country"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="profilePhoto">Profile Photo</label>
+                        <input
+                            type="file"
+                            id="profilePhoto"
+                            name="profilePhoto"
+                            accept="image/png, image/jpeg, image/webp"
+                        >
+                        <div class="photo-preview">
+                            <img
+                                id="photoPreview"
+                                src=""
+                                alt="Profile photo preview"
+                                hidden
+                            >
+                        </div>
+                        <small>Upload a clear profile photo (optional).</small>
+                    </div>
+
+                </div>
+
+                <div class="form-divider"></div>
+
+                <!-- PROFESSIONAL DETAILS -->
+                <div class="form-heading">
+                    <span>02</span>
+                    <div>
+                        <h3>Professional Information</h3>
+                        <p>Tell us about your expertise.</p>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="profession">Professional Role *</label>
+                        <select id="profession" name="profession" required>
+                            <option value="">Select your role</option>
+                            <option value="Web Developer">Web Developer</option>
+                            <option value="Frontend Developer">Frontend Developer</option>
+                            <option value="Backend Developer">Backend Developer</option>
+                            <option value="Full Stack Developer">Full Stack Developer</option>
+                            <option value="UI/UX Designer">UI/UX Designer</option>
+                            <option value="Graphic Designer">Graphic Designer</option>
+                            <option value="PPT Designer">PPT Designer</option>
+                            <option value="Content Writer">Content Writer</option>
+                            <option value="Digital Marketer">Digital Marketer</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Experience Level *</label>
+                        <select id="experience" name="experience" required>
+                            <option value="">Select experience</option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Less than 1 year">Less than 1 year</option>
+                            <option value="1-2 years">1–2 years</option>
+                            <option value="3-5 years">3–5 years</option>
+                            <option value="5+ years">5+ years</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="skills">Skills *</label>
+                        <input
+                            type="text"
+                            id="skills"
+                            name="skills"
+                            placeholder="Example: HTML, CSS, JavaScript, React"
+                            required
+                        >
+                        <small>Separate multiple skills with commas.</small>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="bio">About Yourself *</label>
+                        <textarea
+                            id="bio"
+                            name="bio"
+                            rows="5"
+                            placeholder="Introduce yourself and describe your interests..."
+                            required
+                        ></textarea>
+                    </div>
+
+                </div>
+
+                <div class="form-divider"></div>
+
+                <!-- PORTFOLIO DETAILS -->
+                <div class="form-heading">
+                    <span>03</span>
+                    <div>
+                        <h3>Portfolio & Work</h3>
+                        <p>Show us what you have created.</p>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group full-width">
+                        <label for="portfolio">Portfolio URL</label>
+                        <input
+                            type="url"
+                            id="portfolio"
+                            name="portfolio"
+                            placeholder="https://yourportfolio.com"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="github">GitHub Profile</label>
+                        <input
+                            type="url"
+                            id="github"
+                            name="github"
+                            placeholder="https://github.com/username"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn Profile</label>
+                        <input
+                            type="url"
+                            id="linkedin"
+                            name="linkedin"
+                            placeholder="https://linkedin.com/in/username"
+                        >
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="workSamples">Describe Your Previous Work</label>
+                        <textarea
+                            id="workSamples"
+                            name="workSamples"
+                            rows="4"
+                            placeholder="Mention your projects, achievements, or relevant experience..."
+                        ></textarea>
+                    </div>
+
+                </div>
+
+                <div class="form-divider"></div>
+
+                <!-- AVAILABILITY -->
+                <div class="form-heading">
+                    <span>04</span>
+                    <div>
+                        <h3>Availability</h3>
+                        <p>Let us know how you would like to collaborate.</p>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="availability">Availability *</label>
+                        <select id="availability" name="availability" required>
+                            <option value="">Select availability</option>
+                            <option value="Part-time">Part-time</option>
+                            <option value="Full-time">Full-time</option>
+                            <option value="Project-based">Project-based</option>
+                            <option value="Flexible">Flexible</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workMode">Preferred Work Mode *</label>
+                        <select id="workMode" name="workMode" required>
+                            <option value="">Select work mode</option>
+                            <option value="Remote">Remote</option>
+                            <option value="Hybrid">Hybrid</option>
+                            <option value="On-site">On-site</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!-- AGREEMENT -->
+                <div class="form-agreement">
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="agreement"
+                            name="agreement"
+                            required
+                        >
+                        I confirm that the information provided is accurate
+                        and agree to be contacted regarding my application.
+                    </label>
+                </div>
+
+                <button type="submit" class="register-btn submit-btn">
+                    Submit Application →
+                </button>
+
+                <p id="registrationMessage" class="registration-message"></p>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="register-footer">
+        <a href="index.html" class="logo">
+            ZYRA<span>TECH</span>
+        </a>
+
+        <p>Creativity meets technology.</p>
+
+        <p class="copyright">
+            © 2026 Zyra Tech. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="js/register.js"></script>
+
+</body>
+</html>

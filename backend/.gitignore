@@ -1,0 +1,23 @@
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Dependencies
+node_modules/
+
+# SQLite database files
+zyra-tech.db
+zyra-tech.db-shm
+zyra-tech.db-wal
+
+# Uploaded freelancer files
+uploads/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db
